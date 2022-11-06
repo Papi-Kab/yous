@@ -14,7 +14,7 @@ export default class Counter extends Component {
 
   compute=(operator) => {
     let sign = operator==='+' ? 1 : -1;
-    if(this.state.counter==1 && operator ==='-') sign = 0;
+    if(this.state.counter===1 && operator ==='-') sign = 0;
     let c = this.state.counter + sign;
     this.setState({
       counter: c,
@@ -29,7 +29,7 @@ export default class Counter extends Component {
       <div className="card m-3">  
         <div className="card-header">
           <strong>
-            {this.props.title}: {this.state.counter}
+            {this.props.title ? this.props.title : 'Defaut Title'}: {this.state.counter}
           </strong>
         </div>
         <div className="ml-auto">
@@ -39,9 +39,9 @@ export default class Counter extends Component {
         <div className="card-body">
           {
             this.state.list.map((value, index)=>
-            <span>
+            <span key={index}>
               {index}
-              <img width={100} src={this.props.image}/>
+              <img width={100} src={this.props.image ? this.props.image: 'images/profile.jpg'} alt=""/>
             </span>
             )
           }

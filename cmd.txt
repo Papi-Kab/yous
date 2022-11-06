@@ -1,0 +1,16 @@
+#Pour installer bootstrap dans le projet
+npm install --save bootstrap
+
+#Pour installer le router de react
+npm install --save react-router
+
+#Pour installer le router de react DOM
+npm install --save react-router-dom
+
+#Pour builder l'application pour le deployement
+npm run-script build
+
+#Pour installer la library Axios pour les requête http
+npm install --save axios
+
+https://pixabay.com/api/?key=5832566-81dc7429a63c86e3b707d0429&q=paris
